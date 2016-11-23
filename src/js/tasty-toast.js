@@ -8,7 +8,7 @@
 			type: '',
 			icon: '',
 			title: 'Hey there!',
-			content: `You didn't fill out the content.`,
+			content: `You forgot to fill out the content.`,
 			duration: 6000,
 			onclick: null
 		};
