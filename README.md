@@ -1,4 +1,4 @@
-# choose-bumps
+# tasty-toast
 [![Build Status](https://travis-ci.org/crsten/tasty-toast.svg?branch=master&style=flat-square)](https://travis-ci.org/crsten/tasty-toast)
 [![npm](https://img.shields.io/npm/dt/tasty-toast.svg?style=flat-square)](https://www.npmjs.com/package/tasty-toast)
 [![Bower](https://img.shields.io/bower/v/tasty-toast.svg?style=flat-square)]()
