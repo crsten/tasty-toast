@@ -45,7 +45,7 @@ You can provide `options` to customize `tasty-toast`. Here's an **overview of th
 
 ```js
 Tasty.Toast({
-  type: '', //['error','success'] are possible values
+  type: '', //['error','success','primary','secondary'] are possible values (or leave it empty for no theme)
   icon: '', //Insert your image here
   title: 'Hey there!',
   content: `You didn't fill out the content.`,

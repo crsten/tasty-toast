@@ -60,31 +60,53 @@
 
 .tasty-toast-bucket {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  max-width: calc(100vw - 50px); }
+  bottom: 1.25em;
+  right: 1.25em;
+  max-width: 400px;
+  width: 100%; }
   .tasty-toast-bucket > * + * {
-    margin-top: 25px; }
+    margin-top: 1.25em; }
 
 .tasty-toast {
-  font-size: 20px;
+  font-size: 18px;
   background: white;
-  box-shadow: 5px 23px 70px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 15px 20px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #eaeaea;
+  border-bottom: none;
   font-family: "Quicksand", "Open Sans", Arial;
   animation: jelly 1000ms linear both;
   cursor: default;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
   z-index: 10; }
   .tasty-toast h1 {
     font-size: 1.1em;
     line-height: 1;
-    margin: 0 0 12.5px 0; }
+    margin: 0 0 0.625em 0; }
   .tasty-toast a {
     color: inherit;
     text-decoration: none;
     font-weight: bold; }
 
+.tasty-toast-primary {
+  background: #F38181;
+  border-color: #F38181;
+  background: linear-gradient(to right, #F38181, #f381cd 60%);
+  color: white; }
+  .tasty-toast-primary .tasty-toast-timeout:before {
+    background: linear-gradient(to right, #F38181, #f16a6a 60%); }
+
+.tasty-toast-secondary {
+  background: #FCE38A;
+  border-color: #FCE38A;
+  background: linear-gradient(to right, #FCE38A, #fc978a 60%);
+  color: white; }
+  .tasty-toast-secondary .tasty-toast-timeout:before {
+    background: linear-gradient(to right, #FCE38A, #fbdd71 60%); }
+
 .tasty-toast-success {
   background: #61D885;
+  border-color: #61D885;
   background: linear-gradient(to right, #61D885, #4dd375 60%);
   color: white; }
   .tasty-toast-success .tasty-toast-timeout:before {
@@ -92,6 +114,7 @@
 
 .tasty-toast-error {
   background: #D86161;
+  border-color: #D86161;
   background: linear-gradient(to right, #D86161, #d34d4d 60%);
   color: white; }
   .tasty-toast-error .tasty-toast-timeout:before {
@@ -99,11 +122,11 @@
 
 .tasty-toast-container {
   display: flex;
-  padding: 25px; }
+  padding: 1.25em; }
 
 .tasty-toast-icon {
-  width: 50px;
-  margin-right: 25px;
+  width: 2.5em;
+  margin-right: 1.25em;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -115,9 +138,10 @@
 .tasty-toast-pulse:before {
   content: '';
   display: block;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+  flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   transform-origin: center;
   animation: tasty-toast-pulse 2s infinite linear; }

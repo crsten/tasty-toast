@@ -14,7 +14,7 @@
 		};
 		let options = defaults;
 	  let timeout = null;
-		let type_check = /^(error|success)$/ig;
+		let type_check = /^(error|success|primary|secondary)$/ig;
 		let icon_check = /^/
 
 		for(let key in optInput) {

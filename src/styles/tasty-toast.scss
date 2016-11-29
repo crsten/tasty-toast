@@ -6,7 +6,8 @@
 	position: fixed;
 	bottom: $toast-padding;
 	right: $toast-padding;
-	max-width: calc(100vw - #{$toast-padding * 2});
+	max-width: 400px;
+	width: 100%;
 
 	& > * + * {
 		margin-top: $toast-padding;
@@ -14,12 +15,16 @@
 }
 
 .tasty-toast{
-  font-size: $font-size;
+  font-size: 18px;
 	background: white;
-  box-shadow: 5px 23px 70px -5px rgba(0,0,0,0.5);
+  box-shadow: 5px 15px 20px -5px rgba(0, 0, 0, 0.3);
+	border: 1px solid #eaeaea;
+	border-bottom:none;
 	font-family:  $primary-font;
 	animation: jelly 1000ms linear both;
 	cursor: default;
+	letter-spacing: 0.025em;
+	line-height: 1.5;
 	z-index: 10;
 
 	h1{
@@ -35,8 +40,31 @@
 	}
 }
 
+.tasty-toast-primary{
+	background: $primary;
+	border-color: $primary;
+	@include hue-gradient($primary);
+	color: white;
+
+	.tasty-toast-timeout:before{
+		@include darken-gradient($primary);
+	}
+}
+
+.tasty-toast-secondary{
+	background: $secondary;
+	border-color: $secondary;
+	@include hue-gradient($secondary);
+	color: white;
+
+	.tasty-toast-timeout:before{
+		@include darken-gradient($secondary);
+	}
+}
+
 .tasty-toast-success{
 	background: $success;
+	border-color: $success;
 	@include darken-gradient($success);
 	color: white;
 
@@ -47,6 +75,7 @@
 
 .tasty-toast-error{
 	background: $error;
+	border-color: $error;
 	@include darken-gradient($error);
 	color: white;
 
@@ -79,9 +108,10 @@
 	&:before{
 		content: '';
 		display: block;
-		width: 50px;
-		height: 50px;
-		background-color: rgba(white,0.8);
+		flex-shrink:0;
+		width: 2em;
+		height: 2em;
+		background-color: rgba(black,0.3);
 		border-radius: 50%;
 		transform-origin: center;
 	  animation: tasty-toast-pulse 2s infinite linear;
